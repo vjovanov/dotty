@@ -189,7 +189,7 @@ object Tokens extends TokensCommon {
   /** XML mode */
   final val XMLSTART = 96;         enter(XMLSTART, "$XMLSTART$<") // TODO: deprecate
 
-  final val alphaKeywords = tokenRange(IF, FORSOME)
+  final val alphaKeywords = tokenRange(IF, INLINE)
   final val symbolicKeywords = tokenRange(USCORE, VIEWBOUND)
   final val symbolicTokens = tokenRange(COMMA, VIEWBOUND)
   final val keywords = alphaKeywords | symbolicKeywords
