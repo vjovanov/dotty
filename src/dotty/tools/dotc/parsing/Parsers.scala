@@ -1536,7 +1536,13 @@ object Parsers {
               }
             }
         }
-        else mods = atPos(modStart) { mods | Param }
+        else {
+          if (in.token == INLINE) {
+            in.nextToken()
+            addFlag(mods, Inline)
+          }
+          mods = atPos(modStart) { mods | Param }
+        }
         atPos(tokenRange) {
           val name = ident()
           val tpt =

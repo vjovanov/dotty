@@ -7,6 +7,10 @@ object A {
     inline def square(x: Int): Int = x * x
     square(x)
   }
+
+  inline def pow(base: Double, inline exp: Int): Double = {
+    if (exp == 0) 1 else base * pow(base, exp - 1)
+  }
 }
 
 inline class B
