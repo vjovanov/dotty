@@ -30,3 +30,4 @@ classes/
 tests/partest-generated/
 tests/locks/
 /test-classes/
+/bin
