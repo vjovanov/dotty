@@ -418,6 +418,7 @@ object Flags {
   /** A denotation that is valid in all run-ids */
   final val Permanent = commonFlag(62, "<permanent>")
 
+
 // --------- Combined Flag Sets and Conjunctions ----------------------
 
   /** Flags representing source modifiers */

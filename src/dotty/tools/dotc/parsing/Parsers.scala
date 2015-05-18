@@ -1339,6 +1339,7 @@ object Parsers {
       case PRIVATE   => Private
       case PROTECTED => Protected
       case SEALED    => Sealed
+      case INLINE    => Inline
     }
 
      /** Drop `private' modifier when followed by a qualifier.
@@ -1393,7 +1394,7 @@ object Parsers {
      *  Modifier       ::= LocalModifier
      *                  |  AccessModifier
      *                  |  override
-     *  LocalModifier  ::= abstract | final | sealed | implicit | lazy
+     *  LocalModifier  ::= abstract | final | sealed | implicit | inline | lazy
      */
     def modifiers(allowed: BitSet = modifierTokens, start: Modifiers = Modifiers()): Modifiers = {
       def loop(mods: Modifiers): Modifiers = {

@@ -91,6 +91,7 @@ abstract class TokensCommon {
   //final val LAZY = 59;             enter(LAZY, "lazy")
   //final val THEN = 60;             enter(THEN, "then")
   //final val FORSOME = 61;          enter(FORSOME, "forSome") // TODO: deprecate
+  final val INLINE = 62;           enter(INLINE, "inline")
 
   /** special symbols */
   final val COMMA = 70;            enter(COMMA, "','")
@@ -213,7 +214,7 @@ object Tokens extends TokensCommon {
   final val defIntroTokens = templateIntroTokens | dclIntroTokens
 
   final val localModifierTokens = BitSet(
-    ABSTRACT, FINAL, SEALED, IMPLICIT, LAZY)
+    ABSTRACT, FINAL, SEALED, IMPLICIT, LAZY, INLINE)
 
   final val accessModifierTokens = BitSet(
     PRIVATE, PROTECTED)
